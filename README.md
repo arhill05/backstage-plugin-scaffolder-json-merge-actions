@@ -2,15 +2,16 @@
 
 This is a `json-merge` actions plugin for the `scaffolder-backend` in Backstage.
 
-This contains a collection of actions for using with the [JSON Merger npm package](https://www.npmjs.com/package/json-merger#mergefilesfiles-string-config-config):
+This contains a collection of actions for using with the [JSON Merger npm package](https://www.npmjs.com/package/json-merger):
 
-- json:merge
+- json:merge-files - [JSON Merger doc](https://www.npmjs.com/package/json-merger#mergefilesfiles-string-config-config)
+- json:merge-file - [JSON Merger doc](https://www.npmjs.com/package/json-merger#mergefilefile-string-config-config)
 
 ## Prerequisites
 
 - Node must be installed in the environment your Backstage instance is running in, but it will most likely already be there since your Backstage instance runs in Node.
 
-- Additionally, these actions use the [JSON Merger npm package](https://www.npmjs.com/package/json-merger#mergefilesfiles-string-config-config). It will be useful to understand how it functions as well as what options are available in the configuration.
+- Additionally, these actions use the [JSON Merger npm package](https://www.npmjs.com/package/json-merger). It will be useful to understand how it functions as well as what options are available in the configuration.
 
 ## Getting started
 
@@ -26,7 +27,8 @@ Add the actions you'd like to the scaffolder:
 // packages/backend/src/plugins/scaffolder.ts
 
 import {
-  createJsonMergeAction,
+  createJsonMergeFileAction,
+  createJsonMergeFilesAction
 } from '@mdude2314/backstage-plugin-scaffolder-json-merge-actions';
 import { ScmIntegrations } from '@backstage/integration';
 import { createBuiltinActions, createRouter } from '@backstage/plugin-scaffolder-backend';
@@ -42,7 +44,8 @@ const builtInActions = createBuiltinActions({
 });
 
 const actions = [
-    createJsonMergeAction(),
+    createJsonMergeFileAction(),
+    createJsonMergeFilesAction(),
   ...builtInActions
 ];
 
