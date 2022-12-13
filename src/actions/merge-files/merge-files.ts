@@ -3,15 +3,15 @@ import * as jsonMerger from "json-merger";
 import fsPromises from "fs/promises";
 import ensureDirectoryExists from "../../helpers/ensureDirectoryExists";
 
-export function createJsonMergeAction() {
+export function createJsonMergeFilesAction() {
   return createTemplateAction<{
     inputFiles: string[];
     outputFileName: string;
     outputFilePath?: string;
     jsonMergeOptions?: object;
   }>({
-    id: "json:merge",
-    description: "Merges two files",
+    id: "json:merge-files",
+    description: "Merges two or more files",
     supportsDryRun: true,
     schema: {
       input: {

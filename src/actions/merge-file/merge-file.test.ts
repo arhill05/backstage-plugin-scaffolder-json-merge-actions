@@ -1,5 +1,5 @@
 import { PassThrough } from "stream";
-import { createJsonMergeAction } from "./merge";
+import { createJsonMergeFileAction } from "./merge-file";
 import { getVoidLogger } from "@backstage/backend-common";
 import fs from "fs/promises";
 import path from "path";
@@ -23,7 +23,7 @@ describe("json:merge", () => {
   });
 
   it("should call action", async () => {
-    const action = createJsonMergeAction();
+    const action = createJsonMergeFileAction();
 
     const logger = getVoidLogger();
 
@@ -31,7 +31,7 @@ describe("json:merge", () => {
 
     await action.handler({
       input: {
-        inputFiles: ["test-file-1.json", "test-file-2.json"],
+        inputFile: "src.json",
         outputFileName: "result.json",
         outputFilePath: "results",
       },

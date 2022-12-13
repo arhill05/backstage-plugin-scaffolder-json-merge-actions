@@ -1,1 +1,2 @@
-export * from "./merge";
+export * from "./merge-files";
+export * from "./merge-file";
