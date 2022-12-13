@@ -10,7 +10,7 @@ This contains a collection of actions for using with npm:
 
 - Node must be installed in the environment your Backstage instance is running in, but it will most likely already be there since your Backstage instance runs in Node.
 
-- Additionally, these actions use the [JSON Merger npm package.](https://www.npmjs.com/package/json-merger#mergefilesfiles-string-config-config). It will be useful to understand how it functions as well as what options are available in the configuration.
+- Additionally, these actions use the [JSON Merger npm package](https://www.npmjs.com/package/json-merger#mergefilesfiles-string-config-config). It will be useful to understand how it functions as well as what options are available in the configuration.
 
 ## Getting started
 
