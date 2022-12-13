@@ -2,7 +2,7 @@
 
 This is a `json-merge` actions plugin for the `scaffolder-backend` in Backstage.
 
-This contains a collection of actions for using with npm:
+This contains a collection of actions for using with the [JSON Merger npm package](https://www.npmjs.com/package/json-merger#mergefilesfiles-string-config-config):
 
 - json:merge
 
