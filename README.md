@@ -17,7 +17,7 @@ This contains a collection of actions for using with the [JSON Merger npm packag
 
 In the root directory of your Backstage project:
 
-```
+```shell
 yarn add --cwd packages/backend @mdude2314/backstage-plugin-scaffolder-json-merge-actions
 ```
 
@@ -59,7 +59,31 @@ return await createRouter({
 });
 ```
 
-## Example of using the JSON merge:
+## New Backend System
+
+To get the plugin install using the New Backend System you will need to do the following:
+
+In the root directory of your Backstage project:
+
+```shell
+yarn add --cwd packages/backend @mdude2314/backstage-plugin-scaffolder-json-merge-actions
+```
+
+Then add it to your backend `index.ts` file:
+
+```ts title="packages/backend/src/index.ts"
+const backend = createBackend();
+
+// Other plugins...
+
+/* highlight-add-start */
+backend.add(import('@mdude2314/backstage-plugin-scaffolder-json-merge-actions'));
+/* highlight-add-end */
+
+backend.start();
+```
+
+## Example of using the JSON merge
 
 ```json
 /// files/file-1.json

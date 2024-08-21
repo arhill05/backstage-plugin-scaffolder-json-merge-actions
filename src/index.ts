@@ -6,3 +6,4 @@
  */
 
  export * from './actions';
+ export { JsonMerge as default } from './module';
